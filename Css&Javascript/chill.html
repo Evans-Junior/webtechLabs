@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilling.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .grid-item {
+            font-weight: bolder;
+        }
+        .grid-item:nth-child(1):hover {
+        color: #fff;
+        background-color: #FFD700; 
+        border-bottom: 3px solid black;
+
+        }
+
+        .grid-item:nth-child(2):hover {
+        color: #fff;
+        background-color: #FF69B4; 
+        border-bottom: 3px solid black;
+
+        }
+
+        .grid-item:nth-child(3):hover {
+        color: #fff;
+        background-color: #8FBC8F; 
+        border-bottom: 3px solid black;
+        }
+
+        .grid-item:nth-child(4):hover {
+        color: #fff;
+        background-color: #FF8C00; 
+        border-bottom: 3px solid black;
+        }
+
+        #div1  {
+            border: 1px solid #000; 
+            margin-top: 10px;
+            min-height: 50px;
+            min-width: 100px;
+            padding: 10px; /* Add padding to make it more visible */
+            display: flex; /* Use flex to center the content vertically */
+            align-items: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2 class="title" style="font-size: 100px;">CHILLINGS.COM</h2>
+    <div class="cards">
+        <p>What is your favorite Game? <span style="font-weight: normal; font-size: small;">Click on these games if any is your favorite</span></p>
+        <div class="grid-container">
+            <div class="grid-item" onclick="updateResult(this)">Fortnite</div>
+            <div class="grid-item" onclick="updateResult(this)">League of Legends</div>
+            <div class="grid-item" onclick="updateResult(this)">FIFA series</div>
+            <div class="grid-item" onclick="updateResult(this)">Overwatch</div>
+        </div>
+    </div>
+    <form  action="">
+        <input class="input-text" id="input_game" type="text" placeholder="type it here if not found">
+        <input class="add" type="button" value="Add" onclick="addGame()">
+    </form>
+    <div>
+    <p id="Instruction" style="display: none;">Drag the game into the box to change the color </p>
+    </div style="margin-top:3rem">
+    <div style="display: grid; gap: 50px; grid-template-columns: auto auto; margin: 10px; width: 500px; justify-content: center; align-items: center;">
+        <div id="result" class="data" style="cursor: pointer;" draggable="true" ondragstart="drag(event)"></div>
+        <div id="div1" style="display: none;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    
+
+    <script src="js/dynamics.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+
+*{
+    font-family:Verdana;
+}
+
+.body{
+    margin: 1rem 5rem;
+}
+
+.header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.student_name{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.info_details{
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 0 0;
+    gap: 0.07rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.links{
+    color: #0563C1;
+    text-decoration: underline;
+}
+
+.adjust_space_left{
+    margin-right: 7px;
+}
+
+.experiences{
+    margin-bottom: 1.2rem;
+}
+
+.title{
+    border: 1rem 0;
+    font-size: 15px;
+    font-weight: bolder;
+    padding-top: 7px;
+}
+
+.title_info{
+    border: 1rem 0;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 0.2rem 0 0.15rem;
+}
+
+.experiences_details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    font-size: 14px;
+
+}
+
+.experiences_details_jobs{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    font-size: 14px;
+}
+
+.experiences_details_projects{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.experiences_details_right{
+    text-align: right;
+}
+
+.adjust_space_top{
+    margin-top: 0.25rem;
+}
+
+.location {
+    font-weight: normal;
+}
+
+.points{
+    margin: 0;
+    padding-left: 18px;
+}
+
+.bullet_points{
+    padding-left: 21px;
+}
+
+.bullet_points::marker{
+    font-size: small;
+}
+
+/* Media query for responsive font sizes */
+@media screen and (max-width: 600px) {
+    .body{
+        margin: 1vw;
+    }
+    .student_name {
+        font-size: 5vw; /* Adjust the font size relative to viewport width for smaller screens */
+    }
+
+    .info_details {
+        font-size: 3vw; /* Adjust the font size relative to viewport width for smaller screens */
+    }
+
+    .title, .title_info {
+        font-size: 2.5vw; /* Adjust the font size relative to viewport width for smaller screens */
+    }
+
+    .line {
+        height: 0.2vw; /* Adjust the height relative to viewport width for smaller screens */
+    }
+    
+    .experiences_details_jobs{
+        gap: 0;
+    }
+    /* Add more adjustments for other elements as needed */
+
+}

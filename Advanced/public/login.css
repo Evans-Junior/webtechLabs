@@ -1,0 +1,26 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: #E2F3FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 24px;
+}
+
+.container{
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    border-bottom: 4px solid #d6d5d5;
+
+}
+
+.required-field::before {
+    content: '* ';
+    color: red;  /* You can adjust the color as needed */
+  }
